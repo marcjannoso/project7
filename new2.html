@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Cars Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+body {
+    font-family: Verdana,sans-serif;
+    font-size: 0.9em;
+}
+
+header, footer {
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
+
+section {
+    margin: 5px;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+article {
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 5px;
+}
+aside {text-align: left;
+         width: 360px;
+         float: right; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Cars Times</h1>
+</header>
+<div id="menu">
+<nav class="navbar navbar-default">
+
+         <div class="navbar-header" >
+             <button type="button" class="navbar-toggle" data-target="#mainNavbar" data-toggle="collapse" >
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+             </button>
+
+          </div>
+          <div class="navbar-collapse collapse" id="mainNavbar" style="background-color:#000000;color:white" >
+               <ul class="nav navbar-nav">
+                 <li><a href="index.html">Home</a></li>
+                  <li><a href="folder.html">Folder</a></li>
+                  <li><a href="index1.html">Orders</a></li>
+                  <li><a href="jquery.html">Products</a></li>
+                  <li class="active"><a href="new2.html">infoclient</a></li>
+               </ul>
+               <form class="navbar-form navbar.left" role="search">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search"/>
+                    
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+
+               </form>
+               <ul class="nav navbar-nav navbar-right">
+                   <li><a href="index2.html">Suscribe</a></li>
+                  
+                 
+               </ul>
+            
+          </div>
+</div>
+
+
+
+<article>
+
+  <section id="contact-us" class="contact-us">
+        <div class="contact-ctn">
+            <h1>Contact Us</h1>
+            <div class="grid-left">
+                <p class="intro">Fill in the form below and we will contact you</p>
+                <form  id="contact-form" method="post" action="insertForInfo.php">
+                    <table>
+                        <tr>
+                            <td class="label"><label for="firstname">First Name:</label></td>
+                            <td class="field"><input type="text" name="firstname" id="firstname" maxlength="150" required></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label for="lastname">Last Name:</label></td>
+                            <td class="field"><input type="text" name="lastname" id="lastname" maxlength="150" required></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label for="email">Email:</label></td>
+                            <td class="field"><input type="email" name="email" id="email" required></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label for="address">Address:</label></td>
+                            <td class="field"><textarea name="address" id="address"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="btn-ctn" colspan="2"><input type="reset" value="Reset"><input type="submit" id="submit" value="Submit"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="grid-right">
+                <h3> MyCars </h3>
+                <p>1212 rue Sherbrooke Ouest, Montr&eacute;al, Quebec, H3G 1K4<br>Phone:514-287-2234</p>
+                <p><a href="mailto:info@cars.com">info@cars.com</a></p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+    </section>
+</article>
+<div id="content">
+<section>
+<h2>map</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.4827939424763!2d-73.57978768476261!3d45.50035897910141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a40fbc7ec8d%3A0x3c6bae6f3fdce71b!2s1212+Rue+Sherbrooke+O%2C+Montr%C3%A9al%2C+QC+H3A+1H6!5e0!3m2!1sen!2sca!4v1486535546571" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+</section>
+</div>
+
+
+<footer>
+<p>&copy; 2017 Cars Times. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

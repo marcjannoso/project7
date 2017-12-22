@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Cars Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+body {
+    font-family: Verdana,sans-serif;
+    font-size: 0.9em;
+}
+
+header, footer {
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
+
+section {
+    margin: 5px;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+article {
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Cars Times</h1>
+</header>
+<div id="menu">
+<nav class="navbar navbar-default">
+
+         <div class="navbar-header" >
+             <button type="button" class="navbar-toggle" data-target="#mainNavbar" data-toggle="collapse" >
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+             </button>
+
+          </div>
+          <div class="navbar-collapse collapse" id="mainNavbar" style="background-color:#000000;color:white" >
+               <ul class="nav navbar-nav">
+                 <li><a href="index.html">Home</a></li>
+                <li><a href="folder.html">Folder</a></li>
+                <li><a href="index1.html">Orders</a></li>
+                  <li><a href="jquery.html">Products</a></li>
+                  <li ><a href="new2.html">infoclient</a></li>
+               </ul>
+               <form class="navbar-form navbar.left" role="search">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search"/>
+                    
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+
+               </form>
+               <ul class="nav navbar-nav navbar-right">
+                   <li class="active"><a href="index2.html">Suscribe</a></li>
+                  
+                 
+               </ul>
+            
+          </div>
+</div>
+<section>
+<h2>Put your information and press save. It will automatically save to our file</h2>
+<article>
+
+<table style="width:100% " >
+<tr>
+ <form action="insert.php" method="post">
+    <table style="width:100% ">
+    <tr><th>Name: <input type="text" name="username"></th>
+          <br/>
+    <th>Email: <input type="text" name="email">
+           </th><br/>
+    <th>Age: <input type="text" name="age">
+           </th><br/>
+    <th>Address: <input type="text" name="address">
+          </th> <br/>
+    <th>Telephone: <input type="text" name="telephone">
+           </th></tr><br/>
+
+           <tr><th colspan="5"><input type="submit" value="submit"></th></tr>
+    </table>       
+  </form>
+
+<span id="result"></span>
+
+</table>
+</article>
+</section>
+<section>
+	<div style="width: 100vw; height: 30vw; background-image: url('img/bgheader_residential_4.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+</section>
+
+<footer>
+<p>&copy; 2017 Cars Times. All rights reserved.</p>
+</footer>
+</body>
+</html>

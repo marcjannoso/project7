@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="jquery.css" />
+ 
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="jquery-3.1.1.js"></script>
+    <script>
+    	$(function(){
+
+    		var content = "My new Awesome Content";
+
+    		$('.panel-button').on('click',function(){
+    			var panelId = $(this).attr('data-panelid');
+    			$('#'+panelId).toggle();
+    			$('#'+panelId+' .panel-body').html(content);
+    			
+
+    		});
+
+    	});
+
+    </script>
+
+    <script>
+    	
+    	 $(function() {
+    	 	$('.tab-panels .tabs li').on('click',function() {
+    	 		var $panel = $(this).closest('.tab-panels');
+    	 		$panel.find('.tabs li.active').removeClass('active');
+    	 		$(this).addClass('active');
+    	 		//figure out which panel to show
+    	 		var panelToShow = $(this).attr('rel');
+    	 		//hide current panel
+    	 		$panel.find('.panel.active').slideUp(300,showNextPanel);
+                //show next panel
+    	 		 function showNextPanel() {
+    	 		 	$(this).removeClass('active');
+    	 		 	$('#'+panelToShow).slideDown(300,function() {
+    	 		 
+    	 		 		$(this).addClass('active');
+    	 		 			});
+    	 		 		}
+    	 		 	});
+    	 		 });
+    	 			
+    	 	
+
+
+    </script>
+    <style>
+
+body {
+    font-family: Verdana,sans-serif;
+    font-size: 0.9em;
+    
+}
+
+div#header, div#footer {
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
+
+div#content {
+    margin: 5px;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+div.article {
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+}
+
+div#menu ul {
+    padding: 0;
+}
+
+div#menu ul li {
+    display: inline;
+    margin: 5px;
+}
+</style>
+    	 	
+</head>
+<body>
+<div id="header">
+<h1>Cars Times</h1>
+</div>
+
+<div id="menu" >
+<nav class="navbar navbar-default">
+
+         <div class="navbar-header" >
+             <button type="button" class="navbar-toggle" data-target="#mainNavbar" data-toggle="collapse" >
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+             </button>
+
+          </div>
+          <div class="navbar-collapse collapse" id="mainNavbar" style="background-color:#000000;color:white" >
+               <ul class="nav navbar-nav">
+                 <li><a href="index.html">Home</a></li>
+                  <li ><a href="folder.html">Folder</a></li>
+                  <li><a href="index1.html">Orders</a></li>
+                  <li class="active"><a href="jquery.html">Products</a></li>
+                  <li><a href="new2.html">infoclient</a></li>
+               </ul>
+               <form class="navbar-form navbar.left" role="search">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search"/>
+                    
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+
+               </form>
+               <ul class="nav navbar-nav navbar-right">
+                   <li><a href="index2.html">Suscribe</a></li>
+                  
+                 
+               </ul>
+            
+          </div>
+</div>
+<div id="content">
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Let's Have Fun! double click the button</h1>
+        <button class="panel-button" data-panelid="panel1">#Mazda</button>
+        <button class="panel-button" data-panelid="panel2">#Toyota</button>
+        <button class="panel-button" data-panelid="panel3">#Honda</button>
+        <button class="panel-button" data-panelid="panel4">#Lexus</button>
+    	
+    </div>
+ 
+     <div class="row">
+         <div class="col-xs-3">
+          <div id="panel1" class="panel panel-primary">
+             <div class="panel-heading">
+             	<img src="img/car17.jpg" class="img-responsive">
+             </div>
+          	  <div class="panel-body">Price: $120,000</br>
+              Mazda
+          	  </div>
+          </div>	
+         </div>
+     	
+     	<div class="col-xs-3">
+     		<div id="panel2" class="panel panel-primary">
+     			<div class="panel-heading">
+     				<img src="img/car12.jpg" class="img-responsive">
+     			</div>
+     			<div class="panel-body">Price: $150,000</br>
+              Toyota
+     		    </div>
+     		</div>
+     	</div>
+ 
+            <div class="col-xs-3">
+            	<div id="panel3" class="panel panel-primary">
+            	<div class="panel-heading">
+            		<img src="img/car13.jpg" class="img-responsive">
+            	</div>	
+            	<div class="panel-body">Price: $160,000</br>
+              Honda
+            		</div>
+            		</div>
+                  </div>
+
+             <div class="col-xs-3">
+             <div id="panel4" class="panel panel-primary">
+             	<div class="panel-heading">
+             		<img src="img/car14.jpg" class="img-responsive">
+             	</div>
+             	<div class="panel-body">Price: $170,000</br>
+              Lexus
+             		
+             	</div>
+             </div>
+             	
+             </div>
+     </div>
+	
+</div>
+</div>
+<section>
+  <div style="width: 100vw; height: 30vw; background-image: url('img/bgheader_residential_4.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+</section>
+<div id="footer" >
+<p>&copy; 2017  Cars Times. All rights reserved.</p>
+</div>
+
+</body>
+</html>
